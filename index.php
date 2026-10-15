@@ -18,9 +18,11 @@ $filme3->titulo = "A procura da felicidade";
 $filme3->ano = 2006;
 $filme3->genero = "Melodrama";
 
-echo "<pre>";
+/* echo "<pre>";
 var_dump($filme1, $filme2, $filme3);
-echo "</pre>";
+echo "</pre>"; */
+
+$filmes = [$filme1, $filme2, $filme3];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -42,10 +44,13 @@ echo "</pre>";
 
         <div class="filmes">
 
-            <article>
-
+        <?php foreach($filmes as $filme): ?>
+            <article class="card-filme">
+            <span class="genero"> <?= $filme->genero ?></span>
+            <h2> <?= $filme->titulo ?></h2>
+            <p class="ano">Lançamento: <?= $filme->ano ?></p>
             </article>
-
+        <?php endforeach; ?>
         </div>
 
         <hr>
