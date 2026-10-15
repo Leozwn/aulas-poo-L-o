@@ -4,19 +4,19 @@ require_once "src/Filme.php";
 
 //Criando um OBJETO ou uma INSTÂNCIA a partir da classe Filme
 $filme1 = new Filme();
-$filme1->titulo = "Batman: O Cavaleiro das Trevas";
-$filme1->ano = 2008;
-$filme1->genero = "Ação";
+$filme1->setTitulo("Batman: O Cavaleiro das Trevas");
+$filme1->setAno(2008) ;
+$filme1->setGenero("Ação");
 
 $filme2 = new Filme();
-$filme2->titulo = "O grande Truque";
-$filme2->ano = 2006;
-$filme2->genero = "mistério";
+$filme2->setTitulo("O grande Truque");
+$filme2->setAno(2006);
+$filme2->setGenero("mistério");
 
 $filme3 = new Filme();
-$filme3->titulo = "A procura da felicidade";
-$filme3->ano = 2006;
-$filme3->genero = "Melodrama";
+$filme3->setTitulo("A procura da felicidade");
+$filme3->setAno(2006);
+$filme3->setGenero("Melodrama");
 
 /* echo "<pre>";
 var_dump($filme1, $filme2, $filme3);
@@ -46,8 +46,8 @@ $filmes = [$filme1, $filme2, $filme3];
 
         <?php foreach($filmes as $filme): ?>
             <article class="card-filme">
-            <span class="genero"> <?= $filme->genero ?></span>
-            <h2> <?= $filme->titulo ?></h2>
+            <span class="genero"> <?= $filme->getGenero() ?></span>
+            <h2> <?= $filme->getTitulo() ?></h2>
             <p class="ano">Lançamento: <?= $filme->ano ?></p>
             
             <?php if( $filme->ehClassico()): ?>

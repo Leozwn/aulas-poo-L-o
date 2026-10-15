@@ -18,6 +18,11 @@ class Filme
         return $this->ano;
     }
 
+    public function getTitulo(): int
+    {
+        return $this->titulo;
+    }
+
     /* Métodos setters: permitem ACESSO/ESCRITA (colocar dados) */
     /* Setters recebem através de parâmetros os dados a serem
 colocados nas propriedades. */
