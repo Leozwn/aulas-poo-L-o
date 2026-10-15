@@ -48,7 +48,7 @@ $filmes = [$filme1, $filme2, $filme3];
             <article class="card-filme">
             <span class="genero"> <?= $filme->getGenero() ?></span>
             <h2> <?= $filme->getTitulo() ?></h2>
-            <p class="ano">Lançamento: <?= $filme->ano ?></p>
+            <p class="ano">Lançamento: <?= $filme->getAno() ?></p>
             
             <?php if( $filme->ehClassico()): ?>
                 <span class="classico">clássico</span>

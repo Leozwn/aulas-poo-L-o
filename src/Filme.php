@@ -2,7 +2,7 @@
 
 // src/Filme.php
 
-class Filme
+class Filme 
 {
     private string $titulo;
     private string $genero;
@@ -39,5 +39,10 @@ colocados nas propriedades. */
     public function setAno(string $ano): void
     {
         $this->ano = $ano;
+    }
+
+    public function ehClassico () : bool
+    {
+        return $this->ano < 2000;
     }
 }
