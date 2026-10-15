@@ -8,3 +8,7 @@ acessíveis pelo menu de branches no GitHub.
 ---
 
 ## Branch 01: Classes, Objetos, Propriedades e Métodos
+- 
+-
+-
+-
