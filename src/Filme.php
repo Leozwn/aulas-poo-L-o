@@ -4,16 +4,35 @@
 
 class Filme
 {
-    // Propriedades: características
-    public string $titulo;
-    public string $genero;
-    public int $ano;  // (int) numero inteiro
-    public string $direcao;
-    
-    // Métodos: comportamentos (funções)
-    public function ehClassico(): bool
+    private string $titulo;
+    private string $genero;
+    private int $ano;  // (int) numero inteiro
+
+    public function getGenero(): string
     {
-        // É clássico SE ano for menor que 2000
-        return $this->ano < 2000;
+        return $this->genero;
+    }
+
+    public function getAno(): int
+    {
+        return $this->ano;
+    }
+
+    /* Métodos setters: permitem ACESSO/ESCRITA (colocar dados) */
+    /* Setters recebem através de parâmetros os dados a serem
+colocados nas propriedades. */
+    public function setTitulo(string $titulo): void
+    {
+        $this->titulo = $titulo;
+    }
+
+    public function setGenero(string $genero): void
+    {
+        $this->genero = $genero;
+    }
+    
+    public function setAno(string $ano): void
+    {
+        $this->ano = $ano;
     }
 }
