@@ -2,21 +2,29 @@
 // Importando a classe 
 require_once "src/Filme.php";
 
+//-------------------------------------------------------
+
 //Criando um OBJETO ou uma INSTÂNCIA a partir da classe Filme
-$filme1 = new Filme();
-$filme1->setTitulo("Batman: O Cavaleiro das Trevas");
+$filme1 = new Filme('Batman: O Cavaleiro das Trevas','Ação', 2008);
+
+/* $filme1->setTitulo("Batman: O Cavaleiro das Trevas");
 $filme1->setAno(2008) ;
-$filme1->setGenero("Ação");
+$filme1->setGenero("Ação"); */
 
-$filme2 = new Filme();
-$filme2->setTitulo("O grande Truque");
+$filme2 = new Filme('O grande Truque', 'mistério', 2006);
+
+/* $filme2->setTitulo("O grande Truque");
 $filme2->setAno(2006);
-$filme2->setGenero("mistério");
+$filme2->setGenero("mistério"); */
 
-$filme3 = new Filme();
-$filme3->setTitulo("A procura da felicidade");
+$filme3 = new Filme('A procura da felicidade', 
+'Melodrama', 2006);
+
+/* $filme3->setTitulo("A procura da felicidade");
 $filme3->setAno(2006);
-$filme3->setGenero("Melodrama");
+$filme3->setGenero("Melodrama"); */
+
+// ---------------------------------------------------
 
 /* echo "<pre>";
 var_dump($filme1, $filme2, $filme3);
