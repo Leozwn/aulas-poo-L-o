@@ -1,4 +1,4 @@
-<?php 
+<?php
 // Importando A SUPERCLASSE/PAI
 require_once "src/Conteudo.php";
 // IMPORTANDO A SUBCLASSE/FILHA
@@ -8,7 +8,7 @@ require_once "src/Serie.php";
 //-------------------------------------------------------
 
 //Criando um OBJETO ou uma INSTÂNCIA a partir da classe Filme
-$filme1 = new Filme('Batman: O Cavaleiro das Trevas','Ação', 2008, 166);
+$filme1 = new Filme('Batman: O Cavaleiro das Trevas', 'Ação', 2008, 166);
 
 /* $filme1->setTitulo("Batman: O Cavaleiro das Trevas");
 $filme1->setAno(2008) ;
@@ -20,8 +20,12 @@ $filme2 = new Filme('O grande Truque', 'mistério', 2006, 105);
 $filme2->setAno(2006);
 $filme2->setGenero("mistério"); */
 
-$filme3 = new Filme('A procura da felicidade', 
-'Melodrama', 2006, 145);
+$filme3 = new Filme(
+    'A procura da felicidade',
+    'Melodrama',
+    2006,
+    145
+);
 
 /* $filme3->setTitulo("A procura da felicidade");
 $filme3->setAno(2006);
@@ -31,6 +35,7 @@ $filme3->setGenero("Melodrama"); */
 
 $serie1 = new Serie('Breaking Bad', 'Drama', 2008, 5);
 $serie2 = new Serie('Stranger Things', 'Ficção científica', 2016, 4);
+$series = [$serie1, $serie2];
 
 /* echo "<pre>";
 var_dump($filme1, $filme2, $filme3);
@@ -58,22 +63,31 @@ $filmes = [$filme1, $filme2, $filme3];
 
         <div class="filmes">
 
-        <?php foreach($filmes as $filme): ?>
-            <article class="card-filme">
-            <span class="genero"> <?= $filme->getGenero() ?></span>
-            <h2> <?= $filme->getTitulo() ?></h2>
-            <p class="ano">Lançamento: <?= $filme->getAno() ?></p>
-            
-            <?php if( $filme->ehClassico()): ?>
-                <span class="classico">clássico</span>
-            <?php endif; ?>
-            </article>
-        <?php endforeach; ?>
+            <?php foreach ($filmes as $filme): ?>
+                <article class="card-filme">
+                    <span class="genero"> <?= $filme->getGenero() ?></span>
+                    <h2> <?= $filme->getTitulo() ?></h2>
+                    <p class="ano">Lançamento: <?= $filme->getAno() ?></p>
+
+                    <?php if ($filme->ehClassico()): ?>
+                        <span class="classico">clássico</span>
+                    <?php endif; ?>
+                </article>
+            <?php endforeach; ?>
         </div>
 
         <section>
             <h2>Séries</h2>
-            <pre><?php var_dump($serie1, $serie2); ?></pre>
+            <div class="series">
+                <?php foreach ($series as $serie): ?>
+                    <article class="card-serie">
+                        <span class="genero"><?= $serie->getGenero() ?></span>
+                        <h2><?= $serie->getTitulo() ?></h2>
+                        <p class="ano">Lançamento: <?= $serie->getAno() ?></p>
+                        <p><?= $serie->getTemporadas() ?> temporadas</p>
+                    </article>
+                <?php endforeach; ?>
+            </div>
         </section>
 
         <hr>
@@ -81,7 +95,13 @@ $filmes = [$filme1, $filme2, $filme3];
         <div class="assuntos-estudados">
             <h2>Assuntos estudados</h2>
             <ul>
-                
+                <li>Classe-pai (superclasse): <b>Conteudo</b></li>
+                <li>Classe-filha (subclasse): <b>Filme</b> e <b>Serie</b></li>
+                <li>Herança utilizando <b>extends</b></li>
+                <li>Herança com propriedades e métodos</li>
+                <li>Visibilidade <b>protected</b> na superclasse permitindo o acesso através das subclasses.</li>
+                <li>Construtor da superclasse através de <b>parent::__construct()</b></li>
+                <li>Propriedades específicas das subclasses</li>
             </ul>
         </div>
 
