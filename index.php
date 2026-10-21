@@ -1,30 +1,36 @@
 <?php 
-// Importando a classe 
+// Importando A SUPERCLASSE/PAI
+require_once "src/Conteudo.php";
+// IMPORTANDO A SUBCLASSE/FILHA
 require_once "src/Filme.php";
+require_once "src/Serie.php";
 
 //-------------------------------------------------------
 
 //Criando um OBJETO ou uma INSTÂNCIA a partir da classe Filme
-$filme1 = new Filme('Batman: O Cavaleiro das Trevas','Ação', 2008);
+$filme1 = new Filme('Batman: O Cavaleiro das Trevas','Ação', 2008, 166);
 
 /* $filme1->setTitulo("Batman: O Cavaleiro das Trevas");
 $filme1->setAno(2008) ;
 $filme1->setGenero("Ação"); */
 
-$filme2 = new Filme('O grande Truque', 'mistério', 2006);
+$filme2 = new Filme('O grande Truque', 'mistério', 2006, 105);
 
 /* $filme2->setTitulo("O grande Truque");
 $filme2->setAno(2006);
 $filme2->setGenero("mistério"); */
 
 $filme3 = new Filme('A procura da felicidade', 
-'Melodrama', 2006);
+'Melodrama', 2006, 145);
 
 /* $filme3->setTitulo("A procura da felicidade");
 $filme3->setAno(2006);
 $filme3->setGenero("Melodrama"); */
 
 // ---------------------------------------------------
+
+$serie1 = new Serie('Breaking Bad', 'Drama', 2008, 5);
+$serie2 = new Serie('Stranger Things', 'Ficção científica', 2016, 4);
 
 /* echo "<pre>";
 var_dump($filme1, $filme2, $filme3);
@@ -64,6 +70,11 @@ $filmes = [$filme1, $filme2, $filme3];
             </article>
         <?php endforeach; ?>
         </div>
+
+        <section>
+            <h2>Séries</h2>
+            <pre><?php var_dump($serie1, $serie2); ?></pre>
+        </section>
 
         <hr>
 

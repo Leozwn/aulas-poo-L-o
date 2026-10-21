@@ -27,7 +27,7 @@ class Conteudo
         return $this->ano;
     }
 
-    public function getTitulo(): int
+    public function getTitulo(): string
     {
         return $this->titulo;
     }
